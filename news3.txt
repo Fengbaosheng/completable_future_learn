@@ -1,0 +1,1 @@
+CompletableFuture内部有许多已经封装好的API，使用方便
