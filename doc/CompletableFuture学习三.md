@@ -173,7 +173,7 @@ public class SupplyAsyncDemo02 {
 #### 异步任务中的线程池
 大家已经知道，runAsync()和supplyAsync()方法都是单独开启线程执行异步任务。但是，我们从未创建线程。
 
-CompletableFuture会从ForkJoinPool.commonPool()线程池获取线程来执行这些任务。`**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">ForkJoinPool.commonPool()</font>**`**<font style="color:rgb(64, 64, 64);"> 是 JDK 自带的线程池</font>**<font style="color:rgb(64, 64, 64);">，从 </font>**<font style="color:rgb(64, 64, 64);">Java 7</font>**<font style="color:rgb(64, 64, 64);"> 开始引入（作为 </font>`**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">Fork/Join</font>**`<font style="color:rgb(64, 64, 64);"> 框架的核心部分），并在 </font>**<font style="color:rgb(64, 64, 64);">Java 8</font>**<font style="color:rgb(64, 64, 64);"> 中被 </font>`**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">CompletableFuture</font>**`<font style="color:rgb(64, 64, 64);"> 等异步 API 默认使用。</font>
+CompletableFuture会从ForkJoinPool.commonPool()线程池获取线程来执行这些任务。ForkJoinPool.commonPool()是JDK自带的线程池，从Java7开始引入（作为Fork/Join框架的核心部分），并在Java8中被CompletableFuture等异步API默认使用。
 
 当然，你也可以创建一个线程池，并将其传递给async()和supplyAsync()方法，以使它们从指定的线程池中获取线程执行任务。
 
