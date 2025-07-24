@@ -272,7 +272,7 @@ public class ThenApplyAsyncDemo02 {
 
 ```
 
-以上程序中可鞥的运行结果显示的supplyAsync和thenApplyAsync是同一个线程，是因为JVM对线程池有优化，所以可能需要多运行几次。
+以上程序中可能的运行结果显示的supplyAsync和thenApplyAsync是同一个线程，是因为JVM对线程池有优化，所以可能需要多运行几次。
 
 此外，如果将Executor传递给thenApplyAsync()回调，则该回调的异步任务将从Executor的线程池中获取线程执行。
 

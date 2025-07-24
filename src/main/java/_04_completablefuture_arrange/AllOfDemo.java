@@ -38,7 +38,7 @@ public class AllOfDemo {
                     .count();
             return count;
         });
-        // step 主线程打印输出文件个数
+        // step6 主线程打印输出文件个数
         System.out.println(countFuture.join());
     }
 
