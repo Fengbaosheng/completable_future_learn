@@ -94,10 +94,12 @@ public class FutureDemo {
 
 ```
 
+news.txt文件内容
 ```latex
 干他妈的，今天真TM热啊
 ```
 
+filter_word.txt文件内容
 ```latex
 他妈的,NB,TM,TMD,tm,tmd
 ```
